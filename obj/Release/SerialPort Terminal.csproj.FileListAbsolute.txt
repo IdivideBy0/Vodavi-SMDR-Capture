@@ -1,0 +1,12 @@
+C:\Users\Mike.Murray\Documents\Visual Studio 2010\Projects\WinApp\SerialPort Terminal\bin\Release\SerialPort Terminal.exe.config
+C:\Users\Mike.Murray\Documents\Visual Studio 2010\Projects\WinApp\SerialPort Terminal\bin\Release\SerialPort Terminal.exe.manifest
+C:\Users\Mike.Murray\Documents\Visual Studio 2010\Projects\WinApp\SerialPort Terminal\bin\Release\SerialPort Terminal.application
+C:\Users\Mike.Murray\Documents\Visual Studio 2010\Projects\WinApp\SerialPort Terminal\bin\Release\SerialPort Terminal.exe
+C:\Users\Mike.Murray\Documents\Visual Studio 2010\Projects\WinApp\SerialPort Terminal\bin\Release\SerialPort Terminal.pdb
+C:\Users\Mike.Murray\Documents\Visual Studio 2010\Projects\WinApp\SerialPort Terminal\obj\Release\SerialPortTerminal.frmTerminal.resources
+C:\Users\Mike.Murray\Documents\Visual Studio 2010\Projects\WinApp\SerialPort Terminal\obj\Release\SerialPortTerminal.Properties.Resources.resources
+C:\Users\Mike.Murray\Documents\Visual Studio 2010\Projects\WinApp\SerialPort Terminal\obj\Release\SerialPort Terminal.csproj.GenerateResource.Cache
+C:\Users\Mike.Murray\Documents\Visual Studio 2010\Projects\WinApp\SerialPort Terminal\obj\Release\SerialPort Terminal.exe.manifest
+C:\Users\Mike.Murray\Documents\Visual Studio 2010\Projects\WinApp\SerialPort Terminal\obj\Release\SerialPort Terminal.application
+C:\Users\Mike.Murray\Documents\Visual Studio 2010\Projects\WinApp\SerialPort Terminal\obj\Release\SerialPort Terminal.exe
+C:\Users\Mike.Murray\Documents\Visual Studio 2010\Projects\WinApp\SerialPort Terminal\obj\Release\SerialPort Terminal.pdb

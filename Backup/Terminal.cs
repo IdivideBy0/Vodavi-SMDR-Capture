@@ -28,10 +28,7 @@ namespace SerialPortTerminal
 
     public partial class frmTerminal : Form
     {
-        SqlConnection myConnection = new SqlConnection("user id=sa;" +
-                          "password=suckerfoot;server=PRPSQL1;" +
-                          "database=PRP; " +
-                          "connection timeout=30");
+        SqlConnection myConnection = new SqlConnection("Your connection string");
        
 
 

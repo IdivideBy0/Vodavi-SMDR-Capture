@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SerialPort Terminal.exe" size="26624">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SerialPort Terminal.exe" size="27648">
       <assemblyIdentity name="SerialPort Terminal" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>fO4hmJRQZVqI9jkwtA5C+TKLvtA=</dsig:DigestValue>
+        <dsig:DigestValue>xBw3IOZJBMI20BZ5WcUavJMzmns=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

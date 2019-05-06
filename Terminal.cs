@@ -316,8 +316,20 @@ namespace SerialPortTerminal
                 myPRPConnection.Open();
 
                 SqlCommand myCommand = new SqlCommand("INSERT INTO tblPRPCallAccounting (Extension, CircuitID, CallDuration, CallStartTime, CallDate, CallType, NumberDialed, Qualifier, InternalExt, InboundNumber) " +
-                "Values ('" + Extension + "', '" + CircuitID + "','" + CallDuration + "','" + CallStartTime + "','" + CallDate + "','" + CallType + "','" + NumberDialed + "','" + Qualifier + "','" + InternalExt + "','" + InboundNumber + "')", myPRPConnection);
+                "Values (@Extension, @CircuitID, @CallDuration, @CallStartTime, @CallDate, @CallType, @NumberDialed, @Qualifier, @InternalExt, @InboundNumber)", myPRPConnection);
 
+                myCommand.Parameters.Add("@Extension", SqlDbType.Char, 4).Value = Extension;
+                myCommand.Parameters.Add("@CircuitID", SqlDbType.Char, 3).Value = CircuitID;
+                myCommand.Parameters.Add("@CallDuration", SqlDbType.Char, 10).Value = CallDuration;
+                myCommand.Parameters.Add("@CallStartTime", SqlDbType.Char, 10).Value = CallStartTime;
+                myCommand.Parameters.Add("@CallDate", SqlDbType.Char, 10).Value = CallDate;
+                myCommand.Parameters.Add("@CallType", SqlDbType.Char, 1).Value = CallType;
+                myCommand.Parameters.Add("@NumberDialed", SqlDbType.Char, 24).Value = NumberDialed;
+                myCommand.Parameters.Add("@Qualifier", SqlDbType.Char, 2).Value = Qualifier;
+                myCommand.Parameters.Add("@InternalExt", SqlDbType.Char, 10).Value = InternalExt;
+                myCommand.Parameters.Add("@InboundNumber", SqlDbType.Char, 12).Value = InboundNumber;
+                
+                
                 myCommand.ExecuteNonQuery();
                 myPRPConnection.Close();
 
@@ -514,8 +526,12 @@ namespace SerialPortTerminal
 
                 SqlCommand myCommand = new SqlCommand("INSERT INTO [SYS].[dbo].[tblSmCmntDetail]([TopicNum], [Id], " +
                                                       "[Cmnt], [CmntDate], [UserId], [PrivYn], [Ref], [CompId]) " +
-                                                      "VALUES('1', '" + cus + "', '" + cmnt + "', " +
+                                                      "VALUES('1', @Id, @Cmnt, " +
                                                       " GetDate(), 'sa', 0, 'CALL', 'PRP')", sysConn);
+
+                myCommand.Parameters.Add("@Id", SqlDbType.VarChar, 25).Value = cus;
+                myCommand.Parameters.Add("@Cmnt", SqlDbType.Text).Value = cmnt;
+
 
                 myCommand.ExecuteNonQuery();
                 sysConn.Close();
@@ -589,7 +605,9 @@ namespace SerialPortTerminal
 
                 myConn.Open();
 
-                SqlCommand lookup = new SqlCommand("Select CustID from lkpArCust where '1' + phone = LEFT('" + number + "', 11) or '1' + mobile = LEFT('" + number + "', 11)", myConn);
+                SqlCommand lookup = new SqlCommand("Select CustID from lkpArCust where '1' + phone = LEFT(@Phone, 11) or '1' + mobile = LEFT(@Phone, 11)", myConn);
+
+                lookup.Parameters.AddWithValue("@Phone", number);
 
                 try
                 {

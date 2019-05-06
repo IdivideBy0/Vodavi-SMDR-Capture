@@ -37,7 +37,7 @@ namespace SerialPortTerminal
 
     public partial class frmTerminal : Form
     {
-        SqlConnection myPRPConnection = new SqlConnection("Data Source = PRPSQL1; Initial Catalog = PRP; Integrated Security = SSPI");
+        SqlConnection myPRPConnection = new SqlConnection("Data Source = YOUR_SERVER; Initial Catalog = YOUR_DATABASE; Integrated Security = SSPI");
 
 
         #region Local Variables
@@ -511,7 +511,7 @@ namespace SerialPortTerminal
         private void WriteComment(string ext, string duration, string calltime, string calldate, string num, string cus)
         {
 
-            SqlConnection sysConn = new SqlConnection("Data Source = PRPSQL1; Initial Catalog = SYS; Integrated Security = SSPI");
+            SqlConnection sysConn = new SqlConnection("Data Source = YOUR_SERVER; Initial Catalog = YOUR_DATABASE; Integrated Security = SSPI");
 
             // build the comment string
 
@@ -598,7 +598,7 @@ namespace SerialPortTerminal
         {
             // lookup the dialed number in the ArCust table
 
-            using (SqlConnection myConn = new SqlConnection("Data Source = PRPSQL1; Initial Catalog = PRP; Integrated Security = SSPI"))
+            using (SqlConnection myConn = new SqlConnection("Data Source = YOUR_SERVER; Initial Catalog = YOUR_DATABASE; Integrated Security = SSPI"))
             {
 
                 string CustID = String.Empty;
